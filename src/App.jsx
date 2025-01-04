@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Form from './Components/Form';
 
 
 const COLORS = {
@@ -18,11 +19,17 @@ const HEIGHT = {
 
 function Lego({ color = "red", size = "sm", height = "sm", children, onClick }) {
 
+const [value, setValue] = useState(0);
+
   return <div className= {`flex items-center justify-center ${HEIGHT[height]} ${COLORS[color]} ${SIZE[size]}`}
   onClick={() => {
     onClick?.("mon super parametre");
+    setValue(value +1);
+   
   }}
   >
+    {value}
+    <br />
   {children}
 
   </div>;
@@ -38,6 +45,7 @@ const App = () => {
       </Lego>
    <Lego />
    <Lego color="blue"/>
+   <Form />
     </div>
   );
 };
