@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Form from './Components/Form';
 
 
 const COLORS = {
@@ -45,7 +44,6 @@ const App = () => {
       </Lego>
    <Lego />
    <Lego color="blue"/>
-   <Form />
     </div>
   );
 };
