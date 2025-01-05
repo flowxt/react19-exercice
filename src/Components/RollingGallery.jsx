@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useAnimation, useTransform } from "framer-motion";
-import "./RollingGallery.css";
+import "../RollingGallery.css";
 
 const RollingGallery = ({ autoplay = false, pauseOnHover = false, images = [] }) => {
   const [isScreenSizeSm, setIsScreenSizeSm] = useState(window.innerWidth <= 640);
