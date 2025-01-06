@@ -45,6 +45,7 @@ const App = () => {
    <Lego />
    <Lego color="blue"/>
     </div>
+    
   );
 };
 
